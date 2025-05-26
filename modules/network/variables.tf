@@ -11,13 +11,13 @@ variable "network_name" {
 variable "instances_config" {
   description = "User defined instances configs"
   type = map(object({
-    name = string
+    name       = string
     datacenter = string
 
     rules = map(object({
-      direction = string
-      protocol = string
-      port = string
+      direction  = string
+      protocol   = string
+      port       = string
       source_ips = list(string)
     }))
   }))
